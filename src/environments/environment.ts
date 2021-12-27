@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  local: false,
+  dev: true,
+  test: false,
+  production: false,
+  apiEndPoint: "./assets/data",
+  API_ROOT_AUTH: '.auth/.me',
+  API_AUTH_REFRESH: '.auth/refresh'
 };
 
 /*
