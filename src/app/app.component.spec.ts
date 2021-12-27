@@ -26,10 +26,5 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('ngapp13');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ngapp13 app is running!');
-  });
+ 
 });
