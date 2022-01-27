@@ -11,7 +11,8 @@
     "build:prod": "ng build --configuration=prod && npm i -D typescript",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --code-coverage",
-    "test:ci": "ng test --watch=false --browsers=ChromeHeadless --code-coverage"
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless --code-coverage",
+    "bundle-report": "ng build --configuration=local --stats-json && webpack-bundle-analyzer dist/ngapp13/stats.json"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +31,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.1.2",
+    "@angular-devkit/build-angular": "^13.2.0",
     "@angular/cli": "~13.1.2",
     "@angular/compiler-cli": "~13.1.1",
     "@types/jasmine": "~3.8.0",
@@ -41,6 +42,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.5.4"
+    "typescript": "~4.5.4",
+    "webpack-bundle-analyzer": "^4.5.0"
   }
 }
